@@ -1,6 +1,9 @@
 const express = require('express');
 const app =express();
 
+app.use(express.static('public'));
+app.use(express.static('files'));
+
 app.get('/', function(req,res){
     res.end('<h1>Hello World</h1>');
 })
